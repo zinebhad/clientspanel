@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" routerLink="">agClientPanel</a>
+        <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item " routerLinkActive="active" *ngIf="isLoggedIn">
+                <a class="nav-link" routerLink="/">Dashboard</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item" routerLinkActive="active" *ngIf="!isLoggedIn">
+                <a class="nav-link" routerLink="/login">Login</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active" *ngIf="!isLoggedIn">
+                <a class="nav-link" routerLink="/register">Register</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active" *ngIf="isLoggedIn">
+                <a class="nav-link">{{userLoggedIn}}</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active" *ngIf="isLoggedIn">
+                <a (click)="onLogOut()" class="nav-link">LogOut</a>
+            </li>
+
+        </ul>
+
+    </div>
+</nav>

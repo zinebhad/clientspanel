@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "login-f2f9f": {
+      "hosting": {
+        "agClientPanel": [
+          "login-f2f9f"
+        ]
+      }
+    }
+  }
+}
